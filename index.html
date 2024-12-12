@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="print-message-box">
+        <input type="text" id="input" placeholder="Enter your message here">
+        <button id="btn" onclick="ADDmessage()">Submit</button>
+        <p id="msg"></p>
+    </div>
+
+    <script>
+        var inputEle = document.getElementById("input");
+        var buttonEle = document.getElementById("btn");
+        var msgEl = document.getElementById("msg");
+
+        // Events
+        function ADDmessage() {
+            // Get value from input
+            var inputvalue = inputEle.value;
+
+            // Put input value into P
+            msgEl.innerHTML = inputvalue;
+
+            // Empty input value
+            inputEle.value = "";
+        }
+    </script>
+</body>
+</html>
+
